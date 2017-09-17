@@ -101,5 +101,19 @@ class PidgeyTest < Minitest::Test
     assert_equal 2, result
   end
 
+  # Another test that gave me some trouble with decimals
+  def test_evolutions_27_137
+    result = Pidgey.calc(27,137,true)["evolutions"]
+    assert_equal 14, result
+  end
 
+  def test_pidgeys_27_137
+    result = Pidgey.calc(27,137,true)["pidgeys"]
+    assert_equal 8, result
+  end
+
+  def test_candy_27_137
+    result = Pidgey.calc(27,137,true)["candy"]
+    assert_equal 2, result
+  end
 end
