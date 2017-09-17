@@ -23,7 +23,7 @@ class Pidgey
         # If we have don't already have enough candy for another evolution
         # but we do have enough extra pidgeys to make another evolution, trade them in.
         puts "Should trade?: pidgeys:#{pidgeys} candy:#{candy} Calculated: #{((pidgeys - 1) + candy) / COST}"
-        if ((candy / COST < 1) && (((pidgeys - 1) + candy) / COST > 1))
+        if ((candy / COST < 1) && (((pidgeys - 1) + candy) / COST >= 1))
           puts "Not enough candy, but I can trade some in with #{candy} candy and #{pidgeys} pidgeys."
           until (candy == COST)
             candy += 1
